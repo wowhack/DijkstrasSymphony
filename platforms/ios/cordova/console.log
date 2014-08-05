@@ -1,0 +1,140 @@
+objc[31006]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-01 22:44:25.421 mobileApp[31006:70b] Cannot find executable for CFBundle 0xaa07b80 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-01 22:44:25.425 mobileApp[31006:70b] Cannot find executable for CFBundle 0xa508380 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-01 22:44:25.451 mobileApp[31006:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-01 22:44:25.457 mobileApp[31006:70b] Unlimited access to network resources
+2014-08-01 22:44:25.588 mobileApp[31006:70b] [CDVTimer][keyboard] 0.061989ms
+2014-08-01 22:44:25.588 mobileApp[31006:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-01 22:44:25.589 mobileApp[31006:70b] [CDVTimer][statusbar] 0.303030ms
+2014-08-01 22:44:25.589 mobileApp[31006:70b] [CDVTimer][TotalPluginStartup] 1.150012ms
+2014-08-01 22:44:25.724 mobileApp[31006:70b] Resetting plugins due to page load.
+2014-08-01 22:44:26.092 mobileApp[31006:70b] THREAD WARNING: ['Device'] took '11.735107' ms. Plugin should use a background thread.
+2014-08-01 22:44:26.101 mobileApp[31006:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-08-01 22:44:26.123 mobileApp[31006:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/login
+2014-08-01 22:44:35.608 mobileApp[31006:70b] Resetting plugins due to page load.
+2014-08-01 22:44:37.233 mobileApp[31006:70b] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2014-08-01 22:44:37.233 mobileApp[31006:70b] Resetting plugins due to page load.
+2014-08-01 22:44:37.472 mobileApp[31006:70b] Finished load of: https://m.facebook.com/login.php?skip_api_login=1&api_key=578748605573730&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv2.0%2Fdialog%2Foauth%3Fredirect_uri%3Dhttps%253A%252F%252Fauth.firebase.com%252Fauth%252Ffacebook%252Fcallback%26state%3D%257B%2522firebase%2522%253A%2522heartcoins-localhost%2522%252C%2522transport%2522%253A%2522internal-redirect-hash%2522%257D%26response_type%3Dcode%26client_id%3D578748605573730%26ret%3Dlogin&cancel_uri=https%3A%2F%2Fauth.firebase.com%2Fauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522firebase%2522%253A%2522heartcoins-localhost%2522%252C%2522transport%2522%253A%2522internal-redirect-hash%2522%257D%23_%3D_&display=touch&_rdr
+objc[36304]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 01:13:01.981 mobileApp[36304:70b] Cannot find executable for CFBundle 0xa400ef0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 01:13:01.989 mobileApp[36304:70b] Cannot find executable for CFBundle 0xaa0aed0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 01:13:02.023 mobileApp[36304:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 01:13:02.029 mobileApp[36304:70b] Unlimited access to network resources
+2014-08-02 01:13:02.044 mobileApp[36304:70b] [CDVTimer][keyboard] 0.064015ms
+2014-08-02 01:13:02.045 mobileApp[36304:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 01:13:02.045 mobileApp[36304:70b] [CDVTimer][statusbar] 0.324011ms
+2014-08-02 01:13:02.046 mobileApp[36304:70b] [CDVTimer][TotalPluginStartup] 1.246989ms
+2014-08-02 01:13:02.169 mobileApp[36304:70b] Resetting plugins due to page load.
+2014-08-02 01:13:02.674 mobileApp[36304:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-08-02 01:13:02.716 mobileApp[36304:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/login
+objc[36543]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 01:13:31.700 mobileApp[36543:70b] Cannot find executable for CFBundle 0xa322f60 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 01:13:31.707 mobileApp[36543:70b] Cannot find executable for CFBundle 0xa4182f0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 01:13:31.740 mobileApp[36543:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 01:13:31.748 mobileApp[36543:70b] Unlimited access to network resources
+2014-08-02 01:13:31.770 mobileApp[36543:70b] [CDVTimer][keyboard] 0.068009ms
+2014-08-02 01:13:31.771 mobileApp[36543:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 01:13:31.771 mobileApp[36543:70b] [CDVTimer][statusbar] 0.454009ms
+2014-08-02 01:13:31.772 mobileApp[36543:70b] [CDVTimer][TotalPluginStartup] 1.471996ms
+2014-08-02 01:13:31.878 mobileApp[36543:70b] Resetting plugins due to page load.
+2014-08-02 01:13:32.539 mobileApp[36543:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-08-02 01:13:32.559 mobileApp[36543:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/login
+objc[41253]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:21:39.896 mobileApp[41253:70b] Cannot find executable for CFBundle 0xa538b10 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:21:39.901 mobileApp[41253:70b] Cannot find executable for CFBundle 0xa552c30 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:21:39.942 mobileApp[41253:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:21:39.947 mobileApp[41253:70b] Unlimited access to network resources
+2014-08-02 02:21:39.963 mobileApp[41253:70b] [CDVTimer][keyboard] 0.060022ms
+2014-08-02 02:21:39.963 mobileApp[41253:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:21:39.964 mobileApp[41253:70b] [CDVTimer][statusbar] 0.365973ms
+2014-08-02 02:21:39.964 mobileApp[41253:70b] [CDVTimer][TotalPluginStartup] 1.200020ms
+2014-08-02 02:21:40.019 mobileApp[41253:70b] Resetting plugins due to page load.
+2014-08-02 02:21:40.431 mobileApp[41253:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+objc[41608]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:22:39.041 mobileApp[41608:70b] Cannot find executable for CFBundle 0xa52c380 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:22:39.045 mobileApp[41608:70b] Cannot find executable for CFBundle 0xa329f40 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:22:39.065 mobileApp[41608:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:22:39.071 mobileApp[41608:70b] Unlimited access to network resources
+2014-08-02 02:22:39.085 mobileApp[41608:70b] [CDVTimer][keyboard] 0.057995ms
+2014-08-02 02:22:39.085 mobileApp[41608:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:22:39.086 mobileApp[41608:70b] [CDVTimer][statusbar] 0.301957ms
+2014-08-02 02:22:39.086 mobileApp[41608:70b] [CDVTimer][TotalPluginStartup] 1.080990ms
+2014-08-02 02:22:39.129 mobileApp[41608:70b] Resetting plugins due to page load.
+2014-08-02 02:22:39.515 mobileApp[41608:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+objc[41966]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:23:51.637 mobileApp[41966:70b] Cannot find executable for CFBundle 0xa51f780 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:23:51.641 mobileApp[41966:70b] Cannot find executable for CFBundle 0xa42f4b0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:23:51.661 mobileApp[41966:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:23:51.666 mobileApp[41966:70b] Unlimited access to network resources
+2014-08-02 02:23:51.680 mobileApp[41966:70b] [CDVTimer][keyboard] 0.064015ms
+2014-08-02 02:23:51.681 mobileApp[41966:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:23:51.681 mobileApp[41966:70b] [CDVTimer][statusbar] 0.434041ms
+2014-08-02 02:23:51.682 mobileApp[41966:70b] [CDVTimer][TotalPluginStartup] 1.336038ms
+2014-08-02 02:23:51.717 mobileApp[41966:70b] Resetting plugins due to page load.
+2014-08-02 02:23:52.192 mobileApp[41966:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+objc[42146]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:24:08.714 mobileApp[42146:70b] Cannot find executable for CFBundle 0xa3476e0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:24:08.718 mobileApp[42146:70b] Cannot find executable for CFBundle 0xaa28820 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:24:08.756 mobileApp[42146:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:24:08.761 mobileApp[42146:70b] Unlimited access to network resources
+2014-08-02 02:24:08.776 mobileApp[42146:70b] [CDVTimer][keyboard] 0.059962ms
+2014-08-02 02:24:08.776 mobileApp[42146:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:24:08.776 mobileApp[42146:70b] [CDVTimer][statusbar] 0.340044ms
+2014-08-02 02:24:08.777 mobileApp[42146:70b] [CDVTimer][TotalPluginStartup] 1.129985ms
+2014-08-02 02:24:08.844 mobileApp[42146:70b] Resetting plugins due to page load.
+2014-08-02 02:24:09.187 mobileApp[42146:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+objc[42395]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:24:59.744 mobileApp[42395:70b] Cannot find executable for CFBundle 0xa630e10 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:24:59.747 mobileApp[42395:70b] Cannot find executable for CFBundle 0xa63ab20 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:24:59.769 mobileApp[42395:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:24:59.774 mobileApp[42395:70b] Unlimited access to network resources
+2014-08-02 02:24:59.788 mobileApp[42395:70b] [CDVTimer][keyboard] 0.073016ms
+2014-08-02 02:24:59.788 mobileApp[42395:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:24:59.789 mobileApp[42395:70b] [CDVTimer][statusbar] 0.409007ms
+2014-08-02 02:24:59.789 mobileApp[42395:70b] [CDVTimer][TotalPluginStartup] 1.269042ms
+2014-08-02 02:24:59.824 mobileApp[42395:70b] Resetting plugins due to page load.
+2014-08-02 02:25:00.238 mobileApp[42395:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+objc[42770]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:25:18.897 mobileApp[42770:70b] Cannot find executable for CFBundle 0xa32b3a0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:25:18.904 mobileApp[42770:70b] Cannot find executable for CFBundle 0xa34b930 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:25:18.935 mobileApp[42770:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:25:18.941 mobileApp[42770:70b] Unlimited access to network resources
+2014-08-02 02:25:18.965 mobileApp[42770:70b] [CDVTimer][keyboard] 0.100017ms
+2014-08-02 02:25:18.965 mobileApp[42770:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:25:18.966 mobileApp[42770:70b] [CDVTimer][statusbar] 0.481009ms
+2014-08-02 02:25:18.966 mobileApp[42770:70b] [CDVTimer][TotalPluginStartup] 1.664996ms
+2014-08-02 02:25:19.082 mobileApp[42770:70b] Resetting plugins due to page load.
+2014-08-02 02:25:19.465 mobileApp[42770:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+2014-08-02 02:27:21.070 mobileApp[42770:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-08-02 02:27:23.465 mobileApp[42770:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-08-02 02:27:31.301 mobileApp[42770:70b] Resetting plugins due to page load.
+2014-08-02 02:27:31.303 mobileApp[42770:70b] Failed to load webpage with error: Frame load interrupted
+2014-08-02 02:27:32.422 mobileApp[42770:70b] Resetting plugins due to page load.
+2014-08-02 02:27:32.424 mobileApp[42770:70b] Failed to load webpage with error: Frame load interrupted
+2014-08-02 02:27:32.630 mobileApp[42770:70b] Resetting plugins due to page load.
+2014-08-02 02:27:32.631 mobileApp[42770:70b] Failed to load webpage with error: Frame load interrupted
+2014-08-02 02:27:32.830 mobileApp[42770:70b] Resetting plugins due to page load.
+2014-08-02 02:27:32.831 mobileApp[42770:70b] Failed to load webpage with error: Frame load interrupted
+objc[43160]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:35:01.266 mobileApp[43160:70b] Cannot find executable for CFBundle 0xa6363e0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:35:01.270 mobileApp[43160:70b] Cannot find executable for CFBundle 0xa329070 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:35:01.312 mobileApp[43160:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:35:01.317 mobileApp[43160:70b] Unlimited access to network resources
+2014-08-02 02:35:01.332 mobileApp[43160:70b] [CDVTimer][keyboard] 0.057995ms
+2014-08-02 02:35:01.332 mobileApp[43160:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:35:01.333 mobileApp[43160:70b] [CDVTimer][statusbar] 0.290036ms
+2014-08-02 02:35:01.333 mobileApp[43160:70b] [CDVTimer][TotalPluginStartup] 1.076996ms
+2014-08-02 02:35:01.411 mobileApp[43160:70b] Resetting plugins due to page load.
+2014-08-02 02:35:02.190 mobileApp[43160:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+2014-08-02 02:38:17.956 mobileApp[43160:70b] Simulator slow-motion animations are now on
+objc[44018]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-02 02:42:28.406 mobileApp[44018:70b] Cannot find executable for CFBundle 0xa637f00 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-02 02:42:28.411 mobileApp[44018:70b] Cannot find executable for CFBundle 0xa90e120 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-02 02:42:28.459 mobileApp[44018:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-02 02:42:28.466 mobileApp[44018:70b] Unlimited access to network resources
+2014-08-02 02:42:28.487 mobileApp[44018:70b] [CDVTimer][keyboard] 0.073016ms
+2014-08-02 02:42:28.488 mobileApp[44018:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-02 02:42:28.488 mobileApp[44018:70b] [CDVTimer][statusbar] 0.427008ms
+2014-08-02 02:42:28.488 mobileApp[44018:70b] [CDVTimer][TotalPluginStartup] 1.340985ms
+2014-08-02 02:42:28.579 mobileApp[44018:70b] Resetting plugins due to page load.
+2014-08-02 02:42:28.989 mobileApp[44018:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/

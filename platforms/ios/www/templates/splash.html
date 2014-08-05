@@ -1,0 +1,26 @@
+<ion-view hide-back-button="false" class="splash" has-header="false">
+  <ion-content  has-tabs="true" padding="true">
+    <div class="list">
+      <div class="text-center">
+        <h1 class="major">HeartCoins</h1>
+        <h6 class="major">A currency based on goodwill</h6>        
+        <i class="ion-heart fa-heart"></i>
+      </div>
+      <div class="actions">
+        <div class="row text-center">
+          <button ng-click="$state.go('login')" class=" button button-block  button-assertive" type="submit">
+            Login
+          </button>  
+        </div>
+        <div class="row text-center">
+          <button ng-click="$state.go('signup')" class="button button-block button-outline button-assertive" type="submit">
+            Signup?
+          </button>  
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <h6><a href="/#/tour">Take a tour</a></h6>
+    </div>
+  </ion-content>
+</ion-view>

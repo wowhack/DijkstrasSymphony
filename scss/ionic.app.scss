@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,400,500,600);
+
+// Base
+// -------------------------------
+
+$font-family-sans-serif:          'Source Sans Pro', Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-light-sans-serif:    'Source Sans Pro', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-serif:               Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:           Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$font-size-base:                  17px !default;
+$font-size-large:                 ($font-size-base + 4) !default;
+$font-size-small:                 ($font-size-base - 4) !default;
+
+
+// Buttons
+// -------------------------------
+
+$button-font-size:  ($font-size-base + 3);
+$button-font-icon:  ($font-size-base + 16);
+$button-large-font-size:  ($font-size-large + 3);
+$button-large-icon-size:  ($font-size-large + 16);
+$button-small-font-size:  ($font-size-small + 3);
+$button-small-icon-size:  ($font-size-small + 16);
+
+$button-dark-border:         darken($dark, 5%) !default;
+
+
+$button-dark-active-bg:                            darken($dark, 5%) !default;
+$button-positive-active-bg:                        darken($positive, 5%) !default;
+$button-calm-active-bg:                            darken($calm, 5%) !default;
+$button-assertive-active-bg:                       darken($assertive, 5%) !default;
+
+$button-dark-active-border:                            darken($dark, 25%) !default;
+$button-positive-active-border:                        darken($positive, 25%) !default;
+$button-calm-active-border:                            darken($calm, 25%) !default;
+$button-assertive-active-border:                       darken($assertive, 25%) !default;
+
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
