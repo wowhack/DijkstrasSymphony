@@ -1,6 +1,7 @@
-angular.module('ds', ['ionic'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+var module = angular.module('ds', ['ionic']);
+
+module.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
@@ -21,37 +22,56 @@ angular.module('ds', ['ionic'])
       controller: 'JoinCtrl'
     })
 
-    .state('play', {
-      url: "/play",
-      controller: 'PlayCtrl'
+    .state('lobby', {
+      templateUrl: "templates/lobby.html",
+      controller: 'LobbyCtrl'
     })
 
   $urlRouterProvider.otherwise('/');
 
-})
+});
 
-.run(function($rootScope, $state, $stateParams) {
+module.run(function($rootScope, $state, $stateParams) {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
 
-})
+});
 
 
+module.controller('AppCtrl', function($rootScope, $scope, Auth, API, $state, $location) {
 
+    function checkUser() {
+      API.getMe().then(function(userInfo) {
+        Auth.setUsername(userInfo.id);
+        Auth.setUserCountry(userInfo.country);
+        $rootScope.$emit('login');
+        $location.replace();
+      }, function(err) {
+        $scope.showplayer = false;
+        $scope.showlogin = true;
+        $location.replace();
+      });
+    }
 
-.controller('SplashCtrl', function($scope) {
+    window.addEventListener("message", function(event) {
+      console.log('got postmessage', event);
+      var hash = JSON.parse(event.data);
+      if (hash.type == 'access_token') {
+        Auth.setAccessToken(hash.access_token, hash.expires_in || 60);
+        checkUser();
+      }
+      }, false);
 
-})
+    $rootScope.isLoggedIn = (Auth.getAccessToken() != '');
+    
+    $rootScope.$on('login', function() {
+      $state.go('lobby');
+    });
 
-.controller('HostCtrl', function($scope) {
+    $rootScope.$on('logout', function() {
+      $state.go('splash');
+    });
 
-})
+    checkUser();
+  });
 
-.controller('JoinCtrl', function($scope) {
-  $scope.name = 'Name';
-
-})
-
-.controller('PlayCtrl', function($scope) {
-
-})

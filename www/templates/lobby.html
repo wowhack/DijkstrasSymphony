@@ -1,0 +1,31 @@
+<ion-view  hide-back-button="false" hide-nav-bar="true">
+  <ion-content has-tabs="true" padding="true">
+  
+  <div class="row">
+    <div class="col col-100 text-center">
+      <h3>Hi {{ username }} !</h3>
+    </div>
+  </div>
+  
+  <h4>Players</h4>
+  <ion-list>
+    <ion-item ng-repeat="player in players">
+      {{ player.name }}
+    </ion-item>
+  </ion-list>
+  
+  <button ng-click="startGame()" ng-disabled="checkAmountOfPlayers()" class="button button-block button-full  button-balanced">
+    Start Game!
+  </button>  
+  <div class="row">
+    <div class="col col-100 text-center" ng-show="checkAmountOfPlayers()">
+      <h6><i>You need at least one more player!</i></h6>
+    </div>
+  </div>
+
+    <button ng-click="logout()" class=" button button-clear button-full button-assertive">
+      Go back (log out)
+    </button>  
+
+  </ion-content>
+</ion-view>

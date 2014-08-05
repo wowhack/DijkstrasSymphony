@@ -1,18 +1,36 @@
 <ion-view  hide-back-button="false" hide-nav-bar="true">
   <ion-content has-tabs="true" padding="true">
 
-  <h2>Dijkstra's Symphony</h2>
-  <h4>How good do you relate?</h4>
+  <div class="row">
+    <div class="col col-50 col-offset-25 text-center">
+      <img class="full-image" src="img/the_guy.jpg">      
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col col-100 text-center">
+      <h1>Dijkstra's Symphony</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-100 text-center">
+      <h5>How good do you relate?</h5>    
+    </div>
+  </div>
 
-  <div class="actions">
-    <div class="row text-center">
+  
+
+  
+  <div class="row">
+    <div class="col col-50 col-offset-25 text-center">
       <button ng-click="$state.go('host')" class=" button button-block  button-assertive">
-        Host
+        Host a Game
       </button>  
     </div>
-    <div class="row text-center">
+  </div>
+  <div class="row">
+    <div class="col col-50 col-offset-25 text-center">
       <button ng-click="$state.go('join')" class="button button-block button-balanced">
-        Join
+        Join a Game
       </button>  
     </div>
   </div>
