@@ -92,6 +92,15 @@
           ret.resolve(r);
         });
         return ret.promise;
+      },
+      getArtistNames: function(artistName) {
+        var ret = $q.defer();
+        $http.get(baseUrl + '/search?type=artist&limit=5&q=' + encodeURIComponent(artistName), {
+        }).success(function(r) {
+          console.log('got search results', r);
+          ret.resolve(r);
+        });
+        return ret.promise;
       }
     }
   });

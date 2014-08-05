@@ -1,14 +1,17 @@
 <ion-view hide-back-button="false" hide-nav-bar="true">
   <ion-content  has-tabs="true" padding="true">
-    <div class="actions">
-      <div class="row text-center">
-        <button ng-click="login()" class="button button-block button-balanced">
-          Login with Spotify
-        </button>  
+    <div class="row">
+      <div class="col col-100 text-center">
+        <h1 >Host</h1>
       </div>
     </div>
     
-    <button ng-click="$state.go('splash')" class=" button button-clear button-full button-assertive">
+    <button ng-click="login()" class="button button-block button-full  button-balanced">
+      Login with Spotify
+    </button>  
+  
+
+    <button ng-click="$state.go('splash')" class=" button button-clear button-full button-dark">
       Go back
     </button>  
   </ion-content>

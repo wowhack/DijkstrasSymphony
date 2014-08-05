@@ -1,0 +1,17 @@
+<ion-view  hide-back-button="false" hide-nav-bar="true">
+  <ion-content has-tabs="true" padding="true">
+
+  <h4>Now at {{ Game.currentArtist.name }}</h4>
+  <img src="/img/{{ Game.currentArtist.image }}">
+
+  <h2>Similar Artist</h2>
+
+  <ion-list>
+    <ion-item ng-repeat="artist in Game.currentArtist.similarArtists">
+      {{ artist.name }}
+      <img src="/img/{{ artist.image }}">
+    </ion-item>
+  </ion-list>
+
+  </ion-content>
+</ion-view>

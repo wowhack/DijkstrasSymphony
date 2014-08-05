@@ -75,3 +75,13 @@ module.controller('AppCtrl', function($rootScope, $scope, Auth, API, $state, $lo
     checkUser();
   });
 
+
+module.factory('debounce', function($timeout) {
+    return function(callback, interval) {
+        var timeout = null;
+        return function() {
+            $timeout.cancel(timeout);
+            timeout = $timeout(callback, interval);
+        };
+    }; 
+}); 

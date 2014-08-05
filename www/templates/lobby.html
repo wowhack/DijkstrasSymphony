@@ -7,6 +7,41 @@
     </div>
   </div>
   
+
+  <div class="list list-inset">
+    <label class="item item-input item-icon-right">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" 
+        ng-model="$parent.start" 
+        ng-change="getArtistNames(start, true)" 
+        placeholder="Start Artist">
+    </label>
+
+    <ion-list>
+      <ion-item ng-repeat="artist in artistNames" ng-show="isStart" ng-click="selectArtist(artist, true)">
+        {{ artist.name }}
+      </ion-item>
+    </ion-list>
+
+    <label class="item item-input item-icon-right">
+      <i class="icon ion-search placeholder-icon "></i>
+      <input type="text" 
+        ng-model="$parent.end" 
+        ng-change="getArtistNames(end, false)" 
+        placeholder="End Artist">
+    </label>
+
+    <ion-list>
+      <ion-item ng-repeat="artist in artistNames" ng-show="!isStart" ng-click="selectArtist(artist, false)">
+        {{ artist.name }}
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+
+
+
   <h4>Players</h4>
   <ion-list>
     <ion-item ng-repeat="player in players">
