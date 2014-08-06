@@ -12,8 +12,7 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
 
   var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/rooms");
   var sync = $firebase(ref);
-
-
+  
   $scope.rooms = sync.$asArray();
   $scope.rooms.$add({ status: "pending",
                           owner: Auth.getUsername(),
@@ -61,7 +60,7 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
   // TODO: Kollar inte det här rummet.
   $scope.checkAmountOfPlayers = function() {
     //return $scope.players.length < 1;
-    return Game.getPlayers().length < 1;
+    return false;
   }
 
 
