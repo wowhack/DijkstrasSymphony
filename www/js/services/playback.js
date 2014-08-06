@@ -35,7 +35,7 @@
     var audiotag = null;
 
     function createAndPlayAudio(url, callback, endcallback) {
-      console.log('createAndPlayAudio', url);
+      // console.log('createAndPlayAudio', url);
       if (audiotag != null) {
         audiotag.pause();
         delete(audiotag);
@@ -43,14 +43,14 @@
       }
       audiotag = new Audio(url);
       audiotag.addEventListener('loadedmetadata', function() {
-        console.log('audiotag loadedmetadata');
+        // console.log('audiotag loadedmetadata');
         _duration = audiotag.duration * 1000.0;
         audiotag.volume = _volume / 100.0;
         audiotag.play();
         callback();
       }, false);
       audiotag.addEventListener('ended', function() {
-        console.log('audiotag ended');
+        // console.log('audiotag ended');
         _playing = false;
         _track = '';
         disableTick();
@@ -68,14 +68,14 @@
         audiotag.volume = _volume / 100.0;
       },
       startPlaying: function(trackuri) {
-        console.log('Playback::startPlaying', trackuri);
+        // console.log('Playback::startPlaying', trackuri);
         _track = trackuri;
         _trackdata = null;
         _playing = true;
         _progress = 0;
         var trackid = trackuri.split(':')[2];
         API.getTrack(trackid).then(function(trackdata) {
-          console.log('playback got track', trackdata);
+          // console.log('playback got track', trackdata);
           createAndPlayAudio(trackdata.preview_url, function() {
             _trackdata = trackdata;
             _progress = 0;

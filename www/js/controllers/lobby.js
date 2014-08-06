@@ -19,19 +19,18 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, $ionic
   var gameRoom = rooms.child(userName).set({
       status: "pending",
       owner: userName,
-      players: {},
-      currentTrack: ''
+      players: {}
   });
 
 rooms.child(userName).child('players').child(userName).set({
-  state: 'ready'
+  status: 'ready'
 });
 
 var ref2 = new Firebase('https://dijkstras-harmony.firebaseio.com/rooms/' + userName); // assume value here is {foo: "bar"}
 var obj = $firebase(ref2).$asObject();
 
 obj.$bindTo($rootScope, "room").then(function() {
-   console.log($rootScope.room); // {foo: "bar"}
+   // console.log($rootScope.room); // {foo: "bar"}
 });
 
   $rootScope.$on('login', function() {
@@ -54,7 +53,7 @@ obj.$bindTo($rootScope, "room").then(function() {
   };
 
   $scope.selectArtist = function(artistObject, isStart) {
-    $scope.isStart = isStart;
+    $scope.isStart = isStart;1
 
     if (isStart) {
       Game.setStartArtist(artistObject);
@@ -65,8 +64,6 @@ obj.$bindTo($rootScope, "room").then(function() {
       $scope.end = artistObject.name;
       $scope.selectedEnd = true;
     }
-
-    console.log(artistObject);
     $scope.artistNames = [];
   };  
   
@@ -74,6 +71,14 @@ obj.$bindTo($rootScope, "room").then(function() {
     $ionicLoading.show({
       template: 'Starting game..',
       duration: 500
+    });
+    rooms.child(userName).child('players').child(userName).set({
+      status: 'playing',
+      currentArtist: '',
+      score: 0
+    });
+    rooms.child(userName).update({
+      status: "started"
     });
     Game.startGame();
   }

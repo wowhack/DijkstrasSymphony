@@ -1,6 +1,4 @@
 (function() {
-
-  
 angular.module('ds').controller('JoinCtrl', function($scope, $q, $firebase) {
 	var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/rooms");
 	var sync = $firebase(ref);
