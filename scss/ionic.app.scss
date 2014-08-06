@@ -2,6 +2,7 @@ $dark:                            #6e6c6c !default; //username
 $positive:                        #457cfa !default; //facebook
 $calm:                            #87acff !default; //twitter
 $assertive:                       #ff7959 !default; //google
+$balanced:                        #66cc33 !default;
 
 
 // Base
@@ -66,6 +67,7 @@ body, p, h1, h2, h3, h4, h5 {
   opacity: 0.7;
   
 }
+
 .similar-container {
   padding: 0 !important;
   
@@ -88,6 +90,82 @@ body, p, h1, h2, h3, h4, h5 {
     }
   }
 }
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  padding-top:0;
+}
+
+
+.background {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -2
+}
+
+.background-overlay {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+
+.box {
+  margin-top: 95px;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  
+  h2  {
+    color: white;
+    font-size: 3em;
+  }
+
+  i {
+    background-color:white;
+    border-radius: 70px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 50px;
+    display: inline-block;
+  }
+
+  i.select {
+    color: $balanced;
+    margin-left: -10px;
+  }
+
+  i.play {
+    color: black;
+    margin-right: 20px;
+    
+  }
+
+  
+}
+
+
 
 
 // The path for our ionicons font files, relative to the built CSS in www/css
