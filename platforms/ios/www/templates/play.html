@@ -1,0 +1,46 @@
+<!--ion-view  hide-back-button="false" hide-nav-bar="true">
+  <ion-content has-tabs="true" padding="false">
+  
+  <div class="list">
+    <div class="item item-thumbnail-left">
+      <img src="{{ currentArtist.images[0].url }}">
+      <div class="row text-center">
+        <div class="col">
+          <h4></h4>    
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="item item-thumbnail-right">
+      <img src="{{ endArtist.images[0].url }}">
+      <div class="row text-center">
+        <div class="col">
+          <h4></h4>    
+        </div>
+      </div>
+      
+    </div>
+  </div-->
+
+<ion-view  hide-back-button="false" hide-nav-bar="true" padding="false">
+
+  <button class="button button-large button-block button-clear button-assertive" ng-click="playSongOldSchool({{currentArtist.uri}})">Currently at {{ currentArtist.name }}</button>    
+  <button class="button button-large button-block button-clear button-balanced" ng-click="playSongOldSchool({{endArtist.uri}})">Going to {{ endArtist.name }}</button>    
+
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true">
+    <ion-slide ng-repeat="artist in similarArtists" >
+      <div class="background" style="background-image:url({{ artist.image }})"></div>
+      <div class="background-overlay"></div>
+      
+      <div class="box">
+        <h2>{{ artist.name }}</h2>
+        <div >
+          <i class="icon play ion-skip-forward" ng-click="playSong(artist)"></i>
+          <i class="icon select ion-checkmark-round" ng-click="selectSimilarArtist(artist)"></i>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+
+</ion-view>

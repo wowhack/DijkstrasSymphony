@@ -1,26 +1,41 @@
-<ion-view hide-back-button="false" class="splash" has-header="false">
-  <ion-content  has-tabs="true" padding="true">
-    <div class="list">
-      <div class="text-center">
-        <h1 class="major">HeartCoins</h1>
-        <h6 class="major">A currency based on goodwill</h6>        
-        <i class="ion-heart fa-heart"></i>
-      </div>
-      <div class="actions">
-        <div class="row text-center">
-          <button ng-click="$state.go('login')" class=" button button-block  button-assertive" type="submit">
-            Login
-          </button>  
-        </div>
-        <div class="row text-center">
-          <button ng-click="$state.go('signup')" class="button button-block button-outline button-assertive" type="submit">
-            Signup?
-          </button>  
-        </div>
-      </div>
+<ion-view  hide-back-button="false" hide-nav-bar="true">
+  <ion-content has-tabs="true" padding="true">
+
+  <div class="row">
+    <div class="col col-100 text-center">
+      <h1 class="pacifico">Dijkstra's Symphony</h1>
     </div>
-    <div style="text-align: center">
-      <h6><a href="/#/tour">Take a tour</a></h6>
+  </div>
+  <div class="row">
+    <div class="col col-80 col-offset-10 text-center">
+      <img class="full-image" src="img/the_guy.jpg">      
     </div>
+  </div>  
+  <div class="row">
+    <div class="col col-100 text-center">
+      <h5>How good do you relate?</h5>    
+    </div>
+  </div>
+
+  
+
+  
+  <div class="row">
+    <div class="col col-80 col-offset-10 text-center">
+      <button ng-click="$state.go('host')" class=" button button-block  button-balanced">
+        Host a Game
+      </button>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-80 col-offset-10 text-center">
+      <button ng-click="$state.go('join')" class="button button-block button-assertive">
+        Join a Game
+      </button>  
+    </div>
+  </div>
+
   </ion-content>
 </ion-view>
+
+

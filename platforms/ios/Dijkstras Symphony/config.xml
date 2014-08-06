@@ -28,12 +28,12 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
-    <name>mobileApp</name>
+    <name>Dijkstras Symphony</name>
     <description>
-        An Ionic Framework and Cordova project.
+        A game for Spotify
     </description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+    <author email="pierre@pierrereimertz.com">
+      Gustav and Pierre
     </author>
     <content src="index.html" />
     <access origin="*" />

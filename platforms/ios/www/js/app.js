@@ -1,115 +1,164 @@
-// Ionic Starter App
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'firebase'])
+var module = angular.module('ds', ['ionic', 'firebase']);
 
+module.config(function($stateProvider, $urlRouterProvider) {
 
-.config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
-    // setup an abstract state for the tabs directive
     .state('splash', {
       url: "/",
       templateUrl: "templates/splash.html"
     })
 
-    .state('login', {
-      url: "/login",
-      templateUrl: "templates/login.html",
-      controller: 'LoginCtrl'
+    .state('host', {
+      url: "/host",
+      templateUrl: "templates/host.html",
+      controller: 'HostCtrl'
     })
 
-    .state('logout', {
-      url: "/logout",
-      templateUrl: "templates/login.html",
-      controller: 'LogoutCtrl'
+    .state('join', {
+      url: "/join",
+      templateUrl: "templates/join.html",
+      controller: 'JoinCtrl'
     })
 
-    .state('signup', {
-      url: '/signup',
-      templateUrl: 'templates/signup.html',
-      controller: 'SignupCtrl'
+    .state('lobby', {
+      templateUrl: "templates/lobby.html",
+      controller: 'LobbyCtrl'
     })
 
-    // the pet tab has its own child nav-view and history
-    .state('home_landing', {
-      url: '/home',
-      templateUrl: 'templates/home.html',
-      controller: 'HomeCtrl'
-    });
+    .state('play', {
+      templateUrl: "templates/play.html",
+      controller: 'PlayCtrl'
+    })
 
-  // if none of the above states are matched, use this as the fallback
+    .state('won', {
+      templateUrl: "templates/won.html",
+      controller: 'wonCtrl'
+    })
+
   $urlRouterProvider.otherwise('/');
 
-})
+});
 
-.run(function($rootScope, $firebaseSimpleLogin, $state, $stateParams, $window) {
+module.run(function($rootScope, $state, $stateParams) {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
 
-  var dataRef = new Firebase("https://heartcoins-localhost.firebaseio.com/");
-  var loginObj = $firebaseSimpleLogin(dataRef);
-
-  loginObj.$getCurrentUser().then(function(user) {
-    if(!user){ 
-      // Might already be handled by logout event below
-      $state.go('splash');
-    }
-  }, function(err) {
-  });
-
-  $rootScope.$on('$firebaseSimpleLogin:login', function(e, user) {
-    $state.go('home_landing');
-  });
-
-  $rootScope.$on('$firebaseSimpleLogin:logout', function(e, user) {
-    console.log($state);
-    $state.go('login');
-  });
-})
-
-.controller('LoginCtrl', function($scope, $firebaseSimpleLogin) {
-  $scope.loginData = {};
-
-  var dataRef = new Firebase("https://heartcoins-localhost.firebaseio.com/");
-  $scope.loginObj = $firebaseSimpleLogin(dataRef);
-
-  $scope.tryLogin = function() {
-    $scope.loginObj.$login('facebook').then(function(user) {
-      // The root scope event will trigger and navigate
-    }, function(error) {
-      // Show a form error here
-      console.error('Unable to login', error);
-    });
-  };
-})
-
-
-.controller('SignupCtrl', function($scope) {
-})
-
-.controller('HomeCtrl', function($scope, $firebaseSimpleLogin) {
-
-  $scope.loginData = {};
-
-  var dataRef = new Firebase("https://heartcoins-localhost.firebaseio.com/");
-  $scope.loginObj = $firebaseSimpleLogin(dataRef);
-
-  $scope.tryLogout = function() {
-    $scope.loginObj.$logout().then(function(user) {
-      // The root scope event will trigger and navigate
-    }, function(error) {
-      // Show a form error here
-      console.error('Unable to logout', error);
-    });
-  };
 });
+
+
+module.controller('AppCtrl', function($rootScope, $scope, Auth, API, $state, $location) {
+
+    function checkUser() {
+      API.getMe().then(function(userInfo) {
+        Auth.setUsername(userInfo.id);
+        Auth.setUserCountry(userInfo.country);
+        $rootScope.$emit('login');
+        $location.replace();
+      }, function(err) {
+        $scope.showplayer = false;
+        $scope.showlogin = true;
+        $location.replace();
+      });
+    }
+
+    window.addEventListener("message", function(event) {
+      console.log('got postmessage', event);
+      var hash = JSON.parse(event.data);
+      if (hash.type == 'access_token') {
+        Auth.setAccessToken(hash.access_token, hash.expires_in || 60);
+        checkUser();
+      }
+      }, false);
+
+    $rootScope.isLoggedIn = (Auth.getAccessToken() != '');
+    
+    $rootScope.$on('login', function() {
+      $state.go('lobby');
+    });
+
+    $rootScope.$on('logout', function() {
+      $state.go('splash');
+    });
+
+    $rootScope.$on('play', function() {
+      $state.go('play');
+    });
+
+    $rootScope.$on('won', function() {
+      $state.go('won');
+    });
+
+    checkUser();
+  });
+
+module.config(['$provide', function ($provide) {
+    $provide.decorator('$q', ['$delegate', function ($delegate) {
+        var $q = $delegate;
+
+        // Extention for q
+        $q.allSettled = $q.allSettled || function (promises) {
+            var deferred = $q.defer();
+            if (angular.isArray(promises)) {
+                var states = [];
+                var results = [];
+                var didAPromiseFail = false;
+
+                // First create an array for all promises with their state
+                angular.forEach(promises, function (promise, key) {
+                    states[key] = false;
+                });
+
+                // Helper to check if all states are finished
+                var checkStates = function (states, results, deferred, failed) {
+                    var allFinished = true;
+                    angular.forEach(states, function (state, key) {
+                        if (!state) {
+                            allFinished = false;
+                        }
+                    });
+                    if (allFinished) {
+                        if (failed) {
+                            deferred.reject(results);
+                        } else {
+                            deferred.resolve(results);
+                        }
+                    }
+                }
+
+                // Loop through the promises
+                // a second loop to be sure that checkStates is called when all states are set to false first
+                angular.forEach(promises, function (promise, key) {
+                    $q.when(promise).then(function (result) {
+                        states[key] = true;
+                        results[key] = result;
+                        checkStates(states, results, deferred, didAPromiseFail);
+                    }, function (reason) {
+                        states[key] = true;
+                        results[key] = reason;
+                        didAPromiseFail = true;
+                        checkStates(states, results, deferred, didAPromiseFail);
+                    });
+                });
+            } else {
+                throw 'allSettled can only handle an array of promises (for now)';
+            }
+
+            return deferred.promise;
+        };
+
+        return $q;
+    }]);
+}]);
+
+
+module.factory('debounce', function($timeout) {
+    return function(callback, interval) {
+        var timeout = null;
+        return function() {
+            $timeout.cancel(timeout);
+            timeout = $timeout(callback, interval);
+        };
+    }; 
+}); 
