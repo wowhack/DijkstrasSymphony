@@ -4,19 +4,14 @@
   var results = "5";
 
   module.factory('Game', function(Auth, Echonest, $rootScope, $q, $http, $firebase) {
-    var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/");
-    var sync = $firebase(ref);
-    $scope.playersArray = synd.$asArray();
-    $scope.playersArray.$loaded().then(function() {
-      
-    })
+  var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/players");
 
     var _startArtist, 
         _endArtist, 
         _similarArtists,
         _steps,
-        _currentArtist;
-    
+        _currentArtist,
+        _players = $firebase(ref).$asArray();
 
     return {
       startGame: function() {
@@ -65,6 +60,15 @@
       },
       getSimilarArtists: function(){
         return _similarArtists;
+      },
+      addPlayer: function(playerName) {
+        _players.$add({name: playerName});
+      },
+      getPlayers: function() {
+        return _players;
+      },
+      getPlayerByUsername: function(userName) {
+        console.log(_players);
       }
     }
   });

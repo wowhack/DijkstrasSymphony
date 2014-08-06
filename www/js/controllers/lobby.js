@@ -6,28 +6,20 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
 
   Game.getStartArtist();
   Game.getEndArtist();
-  var time = new Date();
-  var codeString = time.getHours() + "" +time.getMinutes();
 
   $scope.artistNames = []; 
   $scope.isStart = false;
 
   var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/rooms");
   var sync = $firebase(ref);
-  $scope.testArray = sync.$asArray();
-  $scope.testArray.$add({ status: "pending",
-                          owner: $scope.players,
-                          code: codeString  
-                        });
-  /*$scope.testArray.$loaded().then(function() {
-    for (index = 0; index < $scope.testArray.length; ++index) {
-      $scope.testArray.$remove($scope.testArray[index]);
-    }
-    for(var i = 0; i < 10; i++) {
-    $scope.testArray.$add({test: {i: Math.pow(i, i)}});
-    }
-  });*/
 
+
+  $scope.rooms = sync.$asArray();
+  $scope.rooms.$add({ status: "pending",
+                          owner: Auth.getUsername(),
+                          code: Math.floor((Math.random() * 100000) + 1),
+                          players: {name: Auth.getUsername()}
+                        });
 
   $rootScope.$on('login', function() {
     $scope.username = Auth.getUsername();
@@ -56,8 +48,6 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
 
     console.log(artistObject);
     $scope.artistNames = [];
-    
-
   };  
   
   $scope.startGame = function() {
@@ -68,8 +58,10 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
     Auth.logout();
   }
 
+  // TODO: Kollar inte det här rummet.
   $scope.checkAmountOfPlayers = function() {
-    return $scope.players.length < 1;
+    //return $scope.players.length < 1;
+    return Game.getPlayers().length < 1;
   }
 
 
