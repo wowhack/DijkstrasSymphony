@@ -1,19 +1,32 @@
 (function() {
 
   
-angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, debounce, Auth, API, Game) {
+angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, debounce, Auth, API, Game, $firebase) {
   $scope.username = Auth.getUsername();
 
   Game.getStartArtist();
   Game.getEndArtist();
+  var time = new Date();
+  var codeString = time.getHours() + "" +time.getMinutes();
 
   $scope.artistNames = []; 
-  $scope.isStart = false; 
+  $scope.isStart = false;
 
-
-  
-
-    $scope.players = [{name: 'gustav'}];
+  var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/rooms");
+  var sync = $firebase(ref);
+  $scope.testArray = sync.$asArray();
+  $scope.testArray.$add({ status: "pending",
+                          owner: $scope.players,
+                          code: codeString  
+                        });
+  /*$scope.testArray.$loaded().then(function() {
+    for (index = 0; index < $scope.testArray.length; ++index) {
+      $scope.testArray.$remove($scope.testArray[index]);
+    }
+    for(var i = 0; i < 10; i++) {
+    $scope.testArray.$add({test: {i: Math.pow(i, i)}});
+    }
+  });*/
 
 
   $rootScope.$on('login', function() {

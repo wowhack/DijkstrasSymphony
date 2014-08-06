@@ -3,7 +3,14 @@
   var module = angular.module('ds');
   var results = "5";
 
-  module.factory('Game', function(Auth, Echonest, $rootScope, $q, $http) {
+  module.factory('Game', function(Auth, Echonest, $rootScope, $q, $http, $firebase) {
+    var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/");
+    var sync = $firebase(ref);
+    $scope.playersArray = synd.$asArray();
+    $scope.playersArray.$loaded().then(function() {
+      
+    })
+
     var _startArtist, 
         _endArtist, 
         _similarArtists,

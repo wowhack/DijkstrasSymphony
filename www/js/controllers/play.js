@@ -20,8 +20,6 @@ angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playbac
     
     $scope.playIndex = 0; 
     $scope.nextSong = null;
-    
-    
   });
 
   $rootScope.$on('login', function() {
