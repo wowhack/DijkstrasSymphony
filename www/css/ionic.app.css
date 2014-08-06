@@ -33,6 +33,63 @@ body, p, h1, h2, h3, h4, h5 {
     .similar-content .col-50 h1 {
       color: #ff7959; }
 
+.slider {
+  height: 100%; }
+
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 0; }
+
+.background {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -2; }
+
+.background-overlay {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1; }
+
+.box {
+  margin-top: 95px;
+  opacity: 1;
+  position: relative;
+  z-index: 1; }
+  .box h2 {
+    color: white;
+    font-size: 3em; }
+  .box i {
+    background-color: white;
+    border-radius: 70px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 50px;
+    display: inline-block; }
+  .box i.select {
+    color: #66cc33;
+    margin-left: -10px; }
+  .box i.play {
+    color: black;
+    margin-right: 20px; }
+
 /*!
   Ionicons, v1.5.2
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
