@@ -12,13 +12,13 @@ angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playbac
   $scope.nextSong = null;
 
   $rootScope.$on('updateGame', function(){
-    console.log('asdasdasddas');
+    console.log('Called updateGame()');
     $scope.similarArtists = Game.getSimilarArtists();
     $scope.currentArtist = Game.getCurrentArtist();
     $scope.endArtist = Game.getEndArtist();
     $scope.steps = Game.getSteps();
     
-    $scope.playIndex = 0;
+    $scope.playIndex = 0; 
     $scope.nextSong = null;
     
     

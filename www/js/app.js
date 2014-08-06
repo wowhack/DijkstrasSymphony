@@ -1,5 +1,5 @@
 
-var module = angular.module('ds', ['ionic']);
+var module = angular.module('ds', ['ionic', 'firebase']);
 
 module.config(function($stateProvider, $urlRouterProvider) {
 
@@ -33,7 +33,8 @@ module.config(function($stateProvider, $urlRouterProvider) {
     })
 
     .state('won', {
-      templateUrl: "templates/won.html"
+      templateUrl: "templates/won.html",
+      controller: 'wonCtrl'
     })
 
   $urlRouterProvider.otherwise('/');

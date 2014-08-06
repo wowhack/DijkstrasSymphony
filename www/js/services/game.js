@@ -1,6 +1,7 @@
 (function() {
 
   var module = angular.module('ds');
+  var results = "5";
 
   module.factory('Game', function(Auth, Echonest, $rootScope, $q, $http) {
     var _startArtist, 
@@ -15,7 +16,7 @@
         _currentArtist = _startArtist;
         _steps = 0;
 
-        Echonest.getSimilarSpotifyArtists(_currentArtist, 20).then(function(sa){
+        Echonest.getSimilarSpotifyArtists(_currentArtist, results).then(function(sa){
           _similarArtists = sa;
           $rootScope.$emit('play');
 
@@ -25,11 +26,11 @@
 
       },
       selectSimilarArtist: function(artist) {
-        if(artist.name == _currentArtist.name) return $rootScope.$emit('won');;
-        _currentArtist = artist;
         _steps += 1;
+        if(artist.name == _endArtist.name) return $rootScope.$emit('won');;
+        _currentArtist = artist;
 
-        Echonest.getSimilarSpotifyArtists(_currentArtist, 20).then(function(sa){
+        Echonest.getSimilarSpotifyArtists(_currentArtist, results).then(function(sa){
           _similarArtists = sa;
           $rootScope.$emit('updateGame');
 
