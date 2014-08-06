@@ -1,7 +1,7 @@
 (function() {
 
   
-angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, debounce, Auth, API, Playback, Game) {
+angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, debounce, Auth, API, Game) {
   $scope.username = Auth.getUsername();
 
   Game.getStartArtist();

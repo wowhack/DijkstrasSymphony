@@ -1,15 +1,58 @@
 <ion-view  hide-back-button="false" hide-nav-bar="true">
-  <ion-content has-tabs="true" padding="true">
+  <ion-content has-tabs="true" padding="false">
+  
+  <div class="list">
+    <div class="item item-thumbnail-left">
+      <img src="{{ currentArtist.images[0].url }}">
+      <div class="row text-center">
+        <div class="col">
+          <h4>Currently at {{ currentArtist.name }}</h4>    
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="button button-small button-block  button-assertive" ng-click="playSong(artist)">Play</button>    
+        </div>
+      </div>
+    </div>
 
-  <h4>Now at {{ Game.currentArtist.name }}</h4>
-  <img src="/img/{{ Game.currentArtist.image }}">
-
-  <h2>Similar Artist</h2>
-
-  <ion-list>
-    <ion-item ng-repeat="artist in Game.currentArtist.similarArtists">
-      {{ artist.name }}
-      <img src="/img/{{ artist.image }}">
+    <div class="item item-thumbnail-right">
+      <img src="{{ endArtist.images[0].url }}">
+      <div class="row text-center">
+        <div class="col">
+          <h4>Going to {{ endArtist.name }}</h4>    
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="button button-small button-block  button-assertive" ng-click="playSong(artist)">Play</button>    
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h4>Similar Artist</h4>
+  <ion-list padding="false">
+    <ion-item class="similar-container" ng-repeat="artist in similarArtists">
+      <div class="similar-content">    
+        <div class="list">
+          <div class="item item-thumbnail-left">
+            <img src="{{ artist.image }}">
+            <h2>{{ artist.name }}</h2>
+            <p>Nine Inch Nails</p>
+            
+              <div class="row">
+                <div class="col-50 text-center">
+                  <button class="button button-small button-block  button-assertive" ng-click="playSong(artist)">Play</button>    
+                </div>
+                <div class="col-50 text-center">
+                  <button class="button button-small button-block button-balanced" ng-click="selectSimilarArtist(artist)">Select</button>    
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </ion-item>
   </ion-list>
 

@@ -85,6 +85,17 @@
           });
         });
       },
+      startPlayingFromPreview: function(trackdata) {
+        _playing = true;
+        _progress = 0;
+        createAndPlayAudio(trackdata.preview_url, function() {
+          _trackdata = trackdata;
+          _progress = 0;
+          $rootScope.$emit('playerchanged');
+          $rootScope.$emit('trackprogress');
+          enableTick();
+        });
+      },
       stopPlaying: function() {
         _playing = false;
         _track = '';
