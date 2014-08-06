@@ -24,12 +24,12 @@
   </div-->
 
 <ion-view  hide-back-button="false" hide-nav-bar="true" padding="false">
-
+  <button class="button button-large button-block button-clear button-dark" ng-click="playSongOldSchool({{currentArtist.uri}})">Steps: {{steps}}</button>    
   <button class="button button-large button-block button-clear button-assertive" ng-click="playSongOldSchool({{currentArtist.uri}})">Currently at {{ currentArtist.name }}</button>    
   <button class="button button-large button-block button-clear button-balanced" ng-click="playSongOldSchool({{endArtist.uri}})">Going to {{ endArtist.name }}</button>    
 
   <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true">
-    <ion-slide ng-repeat="artist in similarArtists" >
+    <ion-slide ng-repeat="artist in similarArtists">
       <div class="background" style="background-image:url({{ artist.image }})"></div>
       <div class="background-overlay"></div>
       

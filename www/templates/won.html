@@ -6,10 +6,24 @@
   		</div>
   	</div>
   	<div class="row">
-  		<div class="col col-100 text-center">
+  		<div class="coltext-center">
   			You tubmled your way from {{ startArtist.name }} to {{ endArtist.name }} in {{ steps }} jumps.
   		</div>
   	</div>
+
+    <h4>Players</h4>
+    
+    <ion-list>
+      <ion-item ng-repeat="player in players">
+        <div class="item">
+          {{ player.name }}
+          <span class="item-note">
+            {{ player.status }}
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+
   	<div class="row">
   		<div class="col col-50 text-center">
   			<button ng-click="$state.go('splash')" class="button button-block button-full button-assertive">

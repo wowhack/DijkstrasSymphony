@@ -37,7 +37,6 @@
         // window.location = url;
       },
       logout: function(){
-        console.log('do logout...');
         this.setUsername('');
         this.setAccessToken('', 0);
         $rootScope.$emit('logout');

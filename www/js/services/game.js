@@ -10,6 +10,7 @@
         _endArtist, 
         _similarArtists,
         _steps,
+        _room,
         _currentArtist,
         _players = $firebase(ref).$asArray();
 

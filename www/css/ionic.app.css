@@ -7,6 +7,9 @@ body, p, h1, h2, h3, h4, h5 {
   font-size: 40px;
   font-family: 'Pacifico' !important; }
 
+.icon-balanced {
+  color: #66cc33 !important; }
+
 .background {
   padding: 0;
   margin: 0;

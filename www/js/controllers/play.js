@@ -1,7 +1,7 @@
 (function() {
 
   
-angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playback, Game, $ionicSlideBoxDelegate) {
+angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, $ionicLoading, Playback, $ionicSlideBoxDelegate, Game ) {
 
   $scope.similarArtists = Game.getSimilarArtists();
   $scope.currentArtist = Game.getCurrentArtist();
@@ -12,6 +12,7 @@ angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playbac
   $scope.nextSong = null;
 
   $rootScope.$on('updateGame', function(){
+    $ionicSlideBoxDelegate.update();
     $scope.similarArtists = Game.getSimilarArtists();
     $scope.currentArtist = Game.getCurrentArtist();
     $scope.endArtist = Game.getEndArtist();
@@ -21,7 +22,10 @@ angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playbac
     $scope.nextSong = null;
 
     $scope.slideHasChanged(0);
-    $ionicSlideBoxDelegate.update();
+    setTimeout(function(){
+      $ionicLoading.hide();  
+    })
+    
   });
 
   $rootScope.$on('login', function() {
@@ -50,6 +54,9 @@ angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playbac
 
   $scope.selectSimilarArtist = function(artistObject) {
     Game.selectSimilarArtist(artistObject);
+    $ionicLoading.show({
+      template: 'Loading Related Artists..'
+    });
   }
 
   $scope.setBackground = function(imageUrl) {
@@ -69,6 +76,7 @@ angular.module('ds').controller('PlayCtrl', function($scope, $rootScope, Playbac
   }
 
  $scope.slideHasChanged(0);
+ $ionicLoading.hide();
 
 })
 

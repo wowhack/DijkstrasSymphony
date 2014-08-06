@@ -138,3 +138,21 @@ objc[44018]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.a
 2014-08-02 02:42:28.488 mobileApp[44018:70b] [CDVTimer][TotalPluginStartup] 1.340985ms
 2014-08-02 02:42:28.579 mobileApp[44018:70b] Resetting plugins due to page load.
 2014-08-02 02:42:28.989 mobileApp[44018:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E5D803F2-A193-4D60-9D82-F0467B1FFFB0/mobileApp.app/www/index.html#/
+objc[1597]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-08-06 11:35:29.040 Dijkstras Symphony[1597:70b] Cannot find executable for CFBundle 0xa417400 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-08-06 11:35:29.045 Dijkstras Symphony[1597:70b] Cannot find executable for CFBundle 0xa4226f0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-08-06 11:35:29.105 Dijkstras Symphony[1597:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-06 11:35:29.169 Dijkstras Symphony[1597:70b] Unlimited access to network resources
+2014-08-06 11:35:29.172 Dijkstras Symphony[1597:70b] Fix applied for database locations?: YES
+2014-08-06 11:35:29.269 Dijkstras Symphony[1597:70b] [CDVTimer][keyboard] 0.095963ms
+2014-08-06 11:35:29.270 Dijkstras Symphony[1597:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-06 11:35:29.270 Dijkstras Symphony[1597:70b] [CDVTimer][statusbar] 0.374973ms
+2014-08-06 11:35:29.270 Dijkstras Symphony[1597:70b] [CDVTimer][TotalPluginStartup] 1.331985ms
+2014-08-06 11:35:29.464 Dijkstras Symphony[1597:70b] Resetting plugins due to page load.
+2014-08-06 11:35:35.571 Dijkstras Symphony[1597:70b] Finished load of: file:///Users/reimertz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/AC30A21B-55F4-4AAA-B455-E271911205C0/Dijkstras%20Symphony.app/www/index.html#/
+2014-08-06 11:35:35.616 Dijkstras Symphony[1597:70b] failed to get userinfo [object Object]
+2014-08-06 11:35:44.761 Dijkstras Symphony[1597:70b] Resetting plugins due to page load.
+2014-08-06 11:35:44.764 Dijkstras Symphony[1597:70b] do login...
+2014-08-06 11:35:45.688 Dijkstras Symphony[1597:70b] Finished load of: https://accounts.spotify.com/se/login?continue=https:%2F%2Faccounts.spotify.com%2Fauthorize%3Fclient_id%3D9714921402b84783b2a207f1b6e82612%26redirect_uri%3Dhttp%253A%252F%252Flab.possan.se%252Fthirtify%252Fcallback.html%26scope%3Duser-read-private%2520playlist-read-private%2520playlist-modify-public%2520playlist-modify-private%2520user-library-read%2520user-library-modify%26response_type%3Dtoken
+2014-08-06 11:35:58.210 Dijkstras Symphony[1597:70b] Resetting plugins due to page load.
+2014-08-06 11:35:58.283 Dijkstras Symphony[1597:70b] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)

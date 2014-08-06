@@ -1,7 +1,7 @@
 (function() {
 
-  
-angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, debounce, Auth, API, Game, $firebase) {
+angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, $ionicLoading, debounce, Auth, API, Game, $firebase) {
+
   $scope.username = Auth.getUsername();
 
   Game.getStartArtist();
@@ -9,23 +9,42 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
 
   $scope.artistNames = []; 
   $scope.isStart = false;
+  $scope.roomId = Game.roomId;
+  var baseUrl = "https://dijkstras-harmony.firebaseio.com/";
+  var ref = new Firebase(baseUrl);
 
-  var ref = new Firebase("https://dijkstras-harmony.firebaseio.com/rooms");
-  var sync = $firebase(ref);
-  
-  $scope.rooms = sync.$asArray();
-  $scope.rooms.$add({ status: "pending",
-                          owner: Auth.getUsername(),
-                          code: Math.floor((Math.random() * 100000) + 1),
-                          players: {name: Auth.getUsername()}
-                        });
+  var rooms = ref.child("rooms");
+  userName = Auth.getUsername();
+
+  var gameRoom = rooms.child(userName).set({
+      status: "pending",
+      owner: userName,
+      players: {},
+      currentTrack: ''
+  });
+
+rooms.child(userName).child('players').child(userName).set({
+  state: 'ready'
+});
+
+var ref2 = new Firebase('https://dijkstras-harmony.firebaseio.com/rooms/' + userName); // assume value here is {foo: "bar"}
+var obj = $firebase(ref2).$asObject();
+
+obj.$bindTo($rootScope, "room").then(function() {
+   console.log($rootScope.room); // {foo: "bar"}
+});
 
   $rootScope.$on('login', function() {
     $scope.username = Auth.getUsername();
   });
 
+
+
+
   $scope.getArtistNames = function(artistName, isStart) {
     $scope.isStart = isStart;
+    
+    (isStart) ? $scope.selectedStart = false : $scope.selectedEnd = false;
     
     if(artistName.length === 0) return $scope.artistNames = [];
 
@@ -40,9 +59,11 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
     if (isStart) {
       Game.setStartArtist(artistObject);
       $scope.start = artistObject.name;
+      $scope.selectedStart = true;
     } else {
       Game.setEndArtist(artistObject);
       $scope.end = artistObject.name;
+      $scope.selectedEnd = true;
     }
 
     console.log(artistObject);
@@ -50,6 +71,10 @@ angular.module('ds').controller('LobbyCtrl', function($scope, $rootScope, deboun
   };  
   
   $scope.startGame = function() {
+    $ionicLoading.show({
+      template: 'Starting game..',
+      duration: 500
+    });
     Game.startGame();
   }
 
